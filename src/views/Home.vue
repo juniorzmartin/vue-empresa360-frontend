@@ -1,6 +1,6 @@
 <template>
     <div>
        <h3>Home</h3>
-       <router-link :to="{path: '/login'}">Navegar para /login</router-link>
+       <router-link :to="{path: '/'}">Sair</router-link>
     </div>
 </template>
