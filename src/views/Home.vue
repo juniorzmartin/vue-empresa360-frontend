@@ -15,23 +15,23 @@
 
         <div class="d-flex">
             <div class="list-group menu-esquerda">
-                <router-link class="list-group-item list-group-item-action" :to="{path: '/home'}">
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home'}" exact-active-class="active">
                     <i class="bi bi-speedometer2"></i> Dashboard
                 </router-link>
-                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas'}">
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas'}" exact-active-class="active">
                     <i class="bi bi-cart"></i> Vendas
                 </router-link>
-                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas/leads'}">
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas/leads'}" exact-active-class="active">
                     <i class="bi bi-caret-right"></i> Leads
                 </router-link>
-                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas/contratos'}">
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas/contratos'}" exact-active-class="active">
                     <i class="bi bi-caret-right"></i> Contratos
                 </router-link>
-                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/servicos'}">
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/servicos'}" exact-active-class="active">
                     <i class="bi bi-card-checklist"></i> Serviços
                 </router-link>
             </div>
-
+            
             <div class="w-100">
                 <nav aria-label="breadcrumb" class="pt-1 ps-3">
                     <ol class="breadcrumb">
@@ -70,12 +70,14 @@
     background-color: #65a1fa;
     border-color: #65a1fa;
 }
-*/
+
 .router-link-exact-active {
     color: white;
     background-color: #0d6efd;
     border-color: #0d6efd;
 }
+*/
+
 
 
 </style>
