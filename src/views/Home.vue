@@ -21,6 +21,12 @@
                 <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas'}">
                     <i class="bi bi-cart"></i> Vendas
                 </router-link>
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas/leads'}">
+                    <i class="bi bi-caret-right"></i> Leads
+                </router-link>
+                <router-link class="list-group-item list-group-item-action" :to="{path: '/home/vendas/contratos'}">
+                    <i class="bi bi-caret-right"></i> Contratos
+                </router-link>
                 <router-link class="list-group-item list-group-item-action" :to="{path: '/home/servicos'}">
                     <i class="bi bi-card-checklist"></i> Serviços
                 </router-link>

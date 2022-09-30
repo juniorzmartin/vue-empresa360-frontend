@@ -1,8 +1,10 @@
+import Contratos from '@/components/vendas/Contratos.vue'
 import Home from '@/views/Home.vue'
+import Leads from '@/components/vendas/Leads.vue'
 import Login from '@/views/Login.vue'
+import Servicos from '@/components/servicos/Servicos.vue'
 import Site from '@/views/Site.vue'
 import Vendas from '@/components/vendas/Vendas.vue'
-import Servicos from '@/components/servicos/Servicos.vue'
 import { createRouter, createWebHistory} from 'vue-router'
 //createWebHashHistory
 const routes = [
@@ -14,7 +16,11 @@ const routes = [
         path: '/home', //localhost:8080/home
         component: Home,
         children: [
-                { path: 'vendas', component: Vendas}, //localhost:8080/home/vendas
+                { path: 'vendas', component: Vendas, children:      //localhost:8080/home/vendas
+                [
+                    { path: 'leads', component: Leads}, //localhost:8080/home/vendas/leads
+                    { path: 'contratos', component: Contratos} //localhost:8080/home/vendas/contratos
+                ]},                                 
                 { path: 'servicos', component: Servicos} //ocalhost:8080/home/servicos
         ]
     },
