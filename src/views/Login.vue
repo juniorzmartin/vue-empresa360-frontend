@@ -38,9 +38,18 @@ export default {
     methods: {
         navegarPara(){
             //console.log(this.$router) //objeto de roteamento
-            //this.$router.push('/home')
+
+            //coletar dados de e-mail e senha 
+            //realizar uma requisição http de autenticação
+            //receber o token de autorização
+            
+            this.$router.push('/home')
             //this.$router.push({path: '/home'}) // cria um historico de navegação
-            this.$router.replace({path: '/home'}) // apenas modifica a url atual
+            // this.$router.replace({path: '/home'}) // apenas modifica a url atual
+            //this.$router.forward() //avançar no histórico de rotas do navegador
+            //this.$router.back() // retornar no histórico de rotas do navegador
+
+            //this.$router.go(2) //avançar ou retornar o histórico do navegador
         }
     }
 }
