@@ -21,7 +21,7 @@ const routes = [
         children: [
                 { path: 'vendas', component: Vendas, children:      //localhost:8080/home/vendas
                 [
-                    { path: 'leads', component: Leads}, //localhost:8080/home/vendas/leads
+                    { path: 'leads', component: Leads, name:'leads'}, //localhost:8080/home/vendas/leads
                     { path: 'leads/:id', component: Lead, name:'lead'}, //localhost:8080/home/vendas/leads/1
                     { path: 'contratos', component: Contratos, name:'contratos'}, //localhost:8080/home/vendas/contratos
                     { path: '', component: VendasPadrao}  //localhost:8080/home/vendas/
