@@ -7,6 +7,7 @@ import Login from '@/views/Login.vue'
 import Servicos from '@/components/servicos/Servicos.vue'
 import Site from '@/views/Site.vue'
 import Vendas from '@/components/vendas/Vendas.vue'
+import VendasPadrao from '@/components/vendas/VendasPadrao.vue'
 import { createRouter, createWebHistory} from 'vue-router'
 //createWebHashHistory
 const routes = [
@@ -22,7 +23,9 @@ const routes = [
                 [
                     { path: 'leads', component: Leads}, //localhost:8080/home/vendas/leads
                     { path: 'leads/:id', component: Lead}, //localhost:8080/home/vendas/leads/1
-                    { path: 'contratos', component: Contratos} //localhost:8080/home/vendas/contratos
+                    { path: 'contratos', component: Contratos}, //localhost:8080/home/vendas/contratos
+                    { path: '', component: VendasPadrao}  //localhost:8080/home/vendas/
+                    
                 ]},                                 
                 { path: 'servicos', component: Servicos}, //localhost:8080/home/servicos
                 { path: 'dashboard', component: Dashboard} //localhost:8080/home/dashboard
