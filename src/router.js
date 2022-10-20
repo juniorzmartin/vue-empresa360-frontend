@@ -1,5 +1,6 @@
 import Contratos from '@/components/vendas/Contratos.vue'
 import Dashboard from '@/components/dashboard/Dashboard.vue'
+import DashboardRodape from '@/components/dashboard/DashboardRodape.vue'
 import Home from '@/views/Home.vue'
 import Indicadores from '@/components/servicos/Indicadores'
 import Lead from '@/components/vendas/Lead.vue'
@@ -27,8 +28,7 @@ const routes = [
                     { path: 'leads', component: Leads, name:'leads'}, //localhost:8080/home/vendas/leads
                     { path: 'leads/:id', component: Lead, name:'lead'}, //localhost:8080/home/vendas/leads/1
                     { path: 'contratos', component: Contratos, name:'contratos'}, //localhost:8080/home/vendas/contratos
-                    { path: '', component: VendasPadrao}  //localhost:8080/home/vendas/
-                    
+                    { path: '', component: VendasPadrao}  //localhost:8080/home/vendas/   
                 ]},                                 
                 { path: 'servicos', component: Servicos, name: 'servicos', children: //localhost:8080/home/servicos
                 [
@@ -40,7 +40,11 @@ const routes = [
                         }
                     }   //localhost:8080/home/servicos/1
                 ]}, 
-                { path: 'dashboard', component: Dashboard} //localhost:8080/home/dashboard
+                { path: 'dashboard', components: {
+                    default: Dashboard,
+                    rodape: DashboardRodape
+                }
+            } //localhost:8080/home/dashboard
 
         ]
     },
