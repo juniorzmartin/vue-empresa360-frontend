@@ -15,10 +15,23 @@ export default {
     created() {
         this.getDadosApi(`http://localhost:3000/servicos/${this.$route.params.id}`)
     },
+    beforeRouteUpdate(to, from, next){
+        //to = $route para onde estamos indo
+        //from = $route de onde estamos vindo
+        //next = faz com que o fluxo de navegação siga em frente
+        if(to.params.id != undefined){
+            this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`)
+             next()
+        }
+        // console.log(from.params.id)
+       
+    }
+    /*,
     watch: {
         $route(to) { //convenção: to = novo valor, from = valor antigo
             if(to.params.id != undefined) this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`)
         }
     }
+    */
 }
 </script>
