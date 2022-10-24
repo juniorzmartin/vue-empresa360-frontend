@@ -21,18 +21,19 @@ const routes = [
     },
     {
         path: '/home', //localhost:8080/home
+        alias: '/app',
         component: Home,
         children: [
                 { path: 'vendas', component: Vendas, children:      //localhost:8080/home/vendas
                 [
                     { path: 'leads', component: Leads, name:'leads'}, //localhost:8080/home/vendas/leads
-                    { path: 'leads/:id', component: Lead, name:'lead'}, //localhost:8080/home/vendas/leads/1
+                    { path: 'leads/:id', component: Lead, name:'lead', alias:['/l/:id','pessoa/:id','/:id']}, //localhost:8080/home/vendas/leads/1
                     { path: 'contratos', component: Contratos, name:'contratos'}, //localhost:8080/home/vendas/contratos
                     { path: '', component: VendasPadrao}  //localhost:8080/home/vendas/   
                 ]},                                 
                 { path: 'servicos', component: Servicos, name: 'servicos', children: //localhost:8080/home/servicos
                 [
-                    {path: ':id', name:"servico",components: 
+                    {path: ':id',alias:'/s/:id', name:"servico",components: 
                         {
                             default: Servico,
                             opcoes: Opcoes,
