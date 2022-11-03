@@ -7,6 +7,7 @@ import Lead from '@/components/vendas/Lead.vue'
 import Leads from '@/components/vendas/Leads.vue'
 import Login from '@/views/Login.vue'
 import Opcoes from '@/components/servicos/Opcoes.vue'
+import PaginaNaoEncontrada from '@/views/PaginaNaoEncontrada.vue'
 import Servico from '@/components/servicos/Servico.vue'
 import Servicos from '@/components/servicos/Servicos.vue'
 import Site from '@/views/Site.vue'
@@ -49,22 +50,24 @@ const routes = [
 
         ]
     },
-    {
-        path: '/login', //localhost:8080/login
-        component: Login 
-    },
+        {
+            path: '/login', //localhost:8080/login
+            component: Login 
+        },
 
-    { path:'/redirecionamento-1', redirect:'/home/servicos' },
-    { path:'/redirecionamento-2', redirect:{name:'leads'}},
-    { path:'/redirecionamento-3', redirect:'/home/vendas'},
-    { path:'/redirecionamento-4', redirect: to => { 
-        //pode se programar algo antes do redirecionamento ser efetivado
-        console.log(to)
+        { path:'/redirecionamento-1', redirect:'/home/servicos' },
+        { path:'/redirecionamento-2', redirect:{name:'leads'}},
+        { path:'/redirecionamento-3', redirect:'/home/vendas'},
+        { path:'/redirecionamento-4', redirect: to => { 
+            //pode se programar algo antes do redirecionamento ser efetivado
+            console.log(to)
 
-        //return '/home/vendas'
-        return {name: 'vendas'}
-    }
-}
+            //return '/home/vendas'
+            return {name: 'vendas'}
+            }
+        },
+    //{path:'/:catchAll(.*)*', redirect:'/'}, //Vue2 = * 
+    {path:'/:catchAll(.*)*', component: PaginaNaoEncontrada} 
 
 ]
 
